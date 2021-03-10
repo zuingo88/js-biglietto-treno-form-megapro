@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.total_container {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    padding: 0 20%;
+    background-image: linear-gradient(to bottom, #b70000, #af0101, #a60203, #9e0303, #960404, #8e0405, #870305, #7f0305, #760204, #6c0103, #630002, #5a0000);
+     background-repeat: no-repeat;
+}
+
+.white_square {
+    height: 40vh;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 20px;
+}
+
+/* regole ricorrenti */
+.flex {
+    display: flex;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.card {
+    display:flex;
+    flex-direction: column;
+}
+
+/* section first */
+#first .form {
+    justify-content: space-around;
+    margin: 20px;
+}
+
+#first .buttons {
+    justify-content: center;
+    margin: 20px;
+}
+
+/* section second */
+#second table {
+    width: 100%;
+}
+
+
+
