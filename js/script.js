@@ -19,22 +19,24 @@ generaBtn.addEventListener('click', function () {
     
     //controllo immissione corretta dei dati e calcolo prezzo con eventuali sconti
     if (name != '' && distanza > 0 && eta != '') {  //controllo      
-        costoTotale = distanza * costo;
+        costoTotale = (distanza * costo).toFixed(2);
 
         // blocco else if per sconto
         if (eta == 1) { //minorenne
             var sconto = costoTotale * 0.2;
-            costoTotale = costoTotale - sconto;
+            costoTotale = (costoTotale - sconto).toFixed(2);
 
             //stampa offerta in html
             document.getElementById('offerta').innerHTML = 'Sconto del 20%';
 
         } else if (eta == 3) { //over 65
             var sconto = costoTotale * 0.4;
-            costoTotale = costoTotale - sconto;
+            costoTotale = (costoTotale - sconto).toFixed(2);
 
             //stampa offerta in html    
             document.getElementById('offerta').innerHTML = 'Sconto del 40%';
+        } else {
+            document.getElementById('offerta').innerHTML = '-';
         }
 
         //costoTotale stampa in html

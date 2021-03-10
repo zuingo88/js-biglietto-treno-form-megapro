@@ -7,95 +7,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zuingo - biglietto treno megapro</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="total_container flex text_center">
+    <div class="screen">
 
-        <section id="first">
-
-            <h2>Calcola il prezzo del tuo biglietto</h2>
-
-            <div class="white_square">
-
-                <div class="form flex">
-
-                    <div class="card">
-                        <label for="name">Nome e Cognome</label>
-                        <input id="name" type="text" value="Nome">
+        <div class="total_container flex text_center">
+        
+            <section id="first">
+        
+                <h2>Calcola il prezzo del tuo biglietto</h2>
+        
+                <!-- white_square -->
+                <div class="white_square">
+        
+                    <h3>Inserisci qui i tuoi dati</h3>
+        
+                    <div class="form flex">
+        
+                        <div class="card">
+                            <label for="name">Nome e Cognome</label>
+                            <input id="name" type="text" value="Nome" placeholder="Il tuo nome">
+                        </div>
+        
+                        <div class="card">
+                            <label for="distanza">Km da percorrere</label>
+                            <input id="distanza" type="number" value="Distanza"
+                            placeholder="Km">
+                        </div>
+        
+                        <div class="card">
+                            <label for="eta">Fascia d'età</label>
+                            <select id="eta" name="Età" id="">
+                                <option selected value="">Seleziona un'opzione</option>
+                                <option value="1">Minorenne</option>
+                                <option value="2">Maggiorenne</option>
+                                <option value="3">Over 65</option>
+                            </select>
+                        </div>
+        
                     </div>
-
-                    <div class="card">
-                        <label for="distanza">Km da percorrere</label>
-                        <input id="distanza" type="number" value="Distanza">
+        
+                    <div class="buttons flex">
+        
+                        <input id="genera" type="button" value="Calcola">
+        
+                        <input id="annulla" type="button" value="Annulla">
+        
                     </div>
+        
+                </div><!-- white_square -->
+        
+            </section>
+        
+        
+        
+            <section id="second">
+        
+                <h2>Il tuo biglietto</h2>
+        
+                <!-- white_square -->
+                <div class="white_square">
+        
+                    <h3>Dettagli del tuo Viaggio</h3>
+        
+                    <!-- blocco card -->
+                    <div class="blocco_card flex">
+        
+                        <div class="card">
+                            <h4>Nome Passeggero</h4>
+                            <div class="linea"></div>
+                            <span id="passeggero" class="dati"></span>
+                        </div>
+        
+                        <div class="card">
+                            <h4>Offerta</h4>
+                            <div class="linea"></div>
+                            <span id="offerta" class="dati"></span>
+                        </div>
+        
+                        <div class="card">
+                            <h4>N° Carrozza</h4>
+                            <div class="linea"></div>
+                            <span id="carrozza" class="dati"></span>
+                        </div>
+        
+                        <div class="card">
+                            <h4>Codice CP</h4>
+                            <div class="linea"></div>
+                            <span id="codCp" class="dati"></span>
+                        </div>
+        
+                        <div class="card">
+                            <h4>Prezzo</h4>
+                            <div class="linea"></div>
+                            <span id="costo_totale" class="dati"></span>
+                        </div>
+        
+                    </div><!-- blocco_card -->
+        
+                </div><!-- white_square -->
+        
+            </section>
+        </div>
 
-                    <div class="card">
-                        <label for="eta">Fascia d'età</label>
-                        <select id="eta" name="Età" id="">
-                            <option value="1">Minorenne</option>
-                            <option value="2">Maggiorenne</option>
-                            <option value="3">Over 65</option>
-                        </select>
-                    </div>
-
-                </div>
-
-                <div class="buttons flex">
-
-                    <input id="genera" type="button" value="Genera">
-
-                    <input id="annulla" type="button" value="Annulla">
-
-                </div>
-
-            </div>
-
-        </section><!-- first -->
-
-        <section id="second">
-
-            <h2>Il tuo biglietto</h2>
-
-            <div class="white_square">
-
-                <h3>Dettaglio passeggeri</h3>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>
-                                Nome passeggero
-                            </th>
-                            <th>
-                                Offerta
-                            </th>
-                            <th>
-                                Carrozza
-                            </th>
-                            <th>
-                                Codice CP
-                            </th>
-                            <th>
-                                Costo biglietto
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="passeggero"></td>
-                            <td id="offerta"></td>
-                            <td id="carrozza"></td>
-                            <td id="codCp"></td>
-                            <td id="costo_totale"></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-
-        </section>
     </div>
 
     <script src="js/script.js"></script>
