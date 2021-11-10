@@ -4,6 +4,7 @@ var generaBtn = document.getElementById('genera');
 var annullaBtn = document.getElementById('annulla');
 var costo = 0.21;
 var costoTotale = 0;
+var nulla = 0;
 
 generaBtn.addEventListener('click', function () {
     
@@ -51,10 +52,17 @@ generaBtn.addEventListener('click', function () {
         document.getElementById('carrozza').innerHTML = carrozza;
 
     } else {
-        console.log('Inserire tutti i dati');
+        var errore = alert('Errore nella compilazione dei dati!')
     }
 });
 
 annullaBtn.addEventListener('click', function () {
-    //console.log('ho cliccato sul pulsante annulla')
+    var pulisci = document.getElementById;
+
+    pulisci('passeggero').innerHTML = nulla;
+    pulisci('offerta').innerHTML = nulla;
+    pulisci('carrozza').innerHTML = nulla;
+    pulisci('codCp').innerHTML = '';
+    pulisci('costo_totale').innerHTML = nulla;
+    
 });
